@@ -75,3 +75,12 @@ def std_weight(height, gender):
 
 weight = std_weight(height, gender)
 print(round(weight, 2))
+
+# 7
+# - X 주차 주간보고 -
+# 부서: 이름: 업무 요약
+# 1주차부터 5주차까지의 보고서 파일을 만드는 프로그램을 만들라. '1주차.txt', '2주차.txt'...
+for num in range(1, 6):
+    with open(str(num)+"주차.txt", "w", encoding="utf8") as report_file:
+        report_file.write("- {0} 주차 주간보고 -\n".format(num))
+        report_file.write("부서:\t이름:\t업무 요약:")
